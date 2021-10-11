@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-container{
+    width: 80%;
+    margin: auto;
+}
+
+.col{
+    float: left;
+    width: calc(100% / 3);
+    height: 300px;
+}
+
+.col-left{
+    background-color: aqua;
+}
+
+.col-center{
+    background-color: blueviolet;
+}
+
+.col-right{
+    background-color: greenyellow;
+}
+
+/* il calc permette al computer di fare dei calcoli in css e posso risolvere i problemi di larghezza ad esempio in 3 colonne 33,3% per raggiungere 100% SE sono elementi float */
+/* negli inline-block bisogna calcolare 4px di distanza (circa) tra gli elementi che da il browser di default quindi (100% / 3 - 4px) */
+
+.inline-block-container{
+    margin-top: 20px;
+}
+
+.inline-block-container div{
+    display: inline-block;
+    background-color: red;
+    height: 300px;
+    width: calc((100% / 3) - 4px);
+}
